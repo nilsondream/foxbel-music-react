@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red-principal: #E86060;
+    --dark-red-secondary: #662323;
+    --soft-gray: #BDBDBD;
+    --gray: #828282;
+    --gray2: #4F4F4F;
+    --gray3: #555555;
+    --light-red: #FF7676;
+    --white: #FFFFFF;
+    --background: #FFFFFF;
+    --shadow: rgba(0, 0, 0, 0.2);
+
+    --fs-xxs: 10px;
+    --fs-xs: 12px;
+    --fs-sm: 14px;
+    --fs-md: 16px;
+    --fs-lg: 18px;
+    --fs-xl: 20px;
+    --fs-xxl: 22px;
+
+    --fw-lt: 400;
+    --fw-bd: 700;
+
+    --transition: .3s ease-in-out;
+}
+
+body {
+    color: var(--gray3);
+    background-color: var(--background);
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-lt);
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+button,
+input {
+    outline: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+@import './SidebarStyled.scss';
+@import './PlayerStyled.scss';
+@import './HomeStyled.scss';
+@import './MusicStyled.scss';
+@import './LoaderStyled.scss';

@@ -1,0 +1,19 @@
+.loader-skeleton {
+    padding: 25px 0;
+}
+
+.item-skeleton {
+    overflow: hidden;
+
+    .data-skeleton {
+        margin-top: 10px;
+
+        h3 {
+            font-size: var(--fs-sm);
+        }
+
+        p {
+            font-size: var(--fs-xs);
+        }
+    }
+}
