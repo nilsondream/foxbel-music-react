@@ -19,6 +19,8 @@ export const SongsContextProvider = ({ children }) => {
                 trackAudio,
                 autoPlay,
                 setAutoPlay,
+                loading,
+                setLoading,
             }}
         >
             {children}

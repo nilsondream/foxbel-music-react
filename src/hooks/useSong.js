@@ -4,7 +4,7 @@ import { getSongs, getTracks } from '../api'
 import { SongsContext } from '../context/songContext'
 
 export const useSong = () => {
-    const { songs, setSongs } = useContext(SongsContext);
+    const { songs, setSongs, setLoading } = useContext(SongsContext);
     const [track, setTrack] = useState({});
 
     const { id } = useParams();
@@ -25,7 +25,7 @@ export const useSong = () => {
             setSongs(data);
         });
         localStorage.setItem('lastKeyword', keywordToUse);
-    }, [setSongs, currentTrack, keywordToUse]);
+    }, [setSongs, currentTrack, keywordToUse, setLoading]);
 
     useEffect(() => {
         getTracks({ id: currentId ? currentId : IdToUse }).then((data) => {
@@ -33,7 +33,7 @@ export const useSong = () => {
         });
 
         localStorage.setItem('lastId', IdToUse);
-    }, [setTrack, songs, id, currentId, IdToUse]);
+    }, [setTrack, songs, id, setLoading, currentId, IdToUse]);
 
     return { songs, track };
 };
