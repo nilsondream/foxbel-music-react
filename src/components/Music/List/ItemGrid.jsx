@@ -7,7 +7,7 @@ const ItemGrid = () => {
 
     return (
         <>
-            { songs.length > 0 && songs.map((song, index) => <Item key={index} {...song} />)}
+            {songs.length > 0 && songs.map((song, index) => <Item key={index} {...song} />)}
         </>
     )
 }

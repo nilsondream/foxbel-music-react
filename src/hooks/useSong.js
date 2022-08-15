@@ -12,7 +12,7 @@ export const useSong = () => {
     let currentId = id;
 
     let location = useLocation();
-    const currentTrack = location.search.slice(1);
+    const currentTrack = location.search.slice(3);
 
     const keywordToUse = currentTrack || localStorage.getItem('lastKeyword') || '22gz';
 
